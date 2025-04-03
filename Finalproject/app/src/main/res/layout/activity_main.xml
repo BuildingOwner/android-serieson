@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorPrimary"
+  tools:context=".MainActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+      android:id="@+id/poster3"
+      android:layout_width="wrap_content"
+      android:layout_height="50dp"
+      android:layout_marginTop="8dp"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/logo2"
+      tools:ignore="MissingConstraints" />
+
+    <androidx.viewpager.widget.ViewPager
+      android:id="@+id/slider_pager"
+      android:layout_width="0dp"
+      android:layout_height="275dp"
+      android:layout_marginTop="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tab_home" />
+
+    <com.google.android.material.tabs.TabLayout
+      android:id="@+id/indicator"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@color/colorPrimary"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/slider_pager"
+      app:tabBackground="@drawable/indicator_selector"
+      app:tabGravity="center"
+      app:tabIndicatorHeight="0dp">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/Rv_movies_hot"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="28dp"
+      android:text="HOT &amp; NEW"
+      android:textColor="#ffffff"
+      android:textSize="20dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/indicator" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/Rv_movies_popular"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="28dp"
+      android:text="📈지금 인기 급상승!"
+      android:textColor="#ffffff"
+      android:textSize="20dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/Rv_movies_hot" />
+
+    <TextView
+      android:id="@+id/textView5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="28dp"
+      android:text="장르별"
+      android:textColor="#ffffff"
+      android:textSize="20dp"
+      app:layout_constraintStart_toStartOf="@+id/Rv_movies_popular"
+      app:layout_constraintTop_toBottomOf="@+id/Rv_movies_popular" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/Rv_genre"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="8dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="@+id/textView5"
+      app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Spinner
+      android:id="@+id/main_genre"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="16dp"
+      android:textColor="#ffffff"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toBottomOf="@+id/textView5"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toEndOf="@+id/textView5"
+      app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <TextView
+      android:id="@+id/tab_home"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:clickable="true"
+      android:text="홈"
+      android:textColor="#fff"
+      android:textSize="20dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.166"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/poster3" />
+
+    <TextView
+      android:id="@+id/tab_search"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:clickable="true"
+      android:text="검색"
+      android:textColor="#fff"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toBottomOf="@+id/tab_home"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/poster3" />
+
+    <TextView
+      android:id="@+id/tab_detail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:clickable="true"
+      android:text="상세보기"
+      android:textColor="#fff"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toBottomOf="@+id/tab_search"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.833"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/poster3" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

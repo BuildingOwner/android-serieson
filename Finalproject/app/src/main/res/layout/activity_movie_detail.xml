@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/colorPrimary"
+  tools:context=".MovieDetailActivity">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+      android:id="@+id/detail_movie_img"
+      android:layout_width="wrap_content"
+      android:layout_height="200dp"
+      android:scaleType="centerInside"
+      android:transitionName="sharedName"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/leon" />
+
+    <TextView
+      android:id="@+id/detail_title"
+      android:layout_width="310dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="24dp"
+      android:text="title"
+      android:textColor="#ffffff"
+      android:textSize="30dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/detail_movie_img" />
+
+    <TextView
+      android:id="@+id/ranking3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="20dp"
+      android:text="⭐"
+      android:textSize="20dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/detail_title" />
+
+    <TextView
+      android:id="@+id/detile_vote_average"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="4dp"
+      android:text="VA"
+      android:textColor="#ccc"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toBottomOf="@+id/ranking3"
+      app:layout_constraintStart_toEndOf="@+id/ranking3" />
+
+    <TextView
+      android:id="@+id/detail_year"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:text="year"
+      android:textColor="#ccc"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toBottomOf="@+id/detile_vote_average"
+      app:layout_constraintStart_toEndOf="@+id/detile_vote_average" />
+
+    <TextView
+      android:id="@+id/detail_time"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:text="runningTime"
+      android:textColor="#ccc"
+      android:textSize="20dp"
+      app:layout_constraintBottom_toBottomOf="@+id/detail_year"
+      app:layout_constraintStart_toEndOf="@+id/detail_year" />
+
+    <TextView
+      android:id="@+id/ranking2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="20dp"
+      android:text="감독"
+      android:textColor="#ffffff"
+      android:textSize="24dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/detile_vote_average" />
+
+    <TextView
+      android:id="@+id/detail_director"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:text="director"
+      android:textColor="#999"
+      android:textSize="24dp"
+      app:layout_constraintBottom_toBottomOf="@+id/ranking2"
+      app:layout_constraintStart_toEndOf="@+id/ranking2" />
+
+    <TextView
+      android:id="@+id/title3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="출연"
+      android:textColor="#ffffff"
+      android:textSize="24dp"
+      app:layout_constraintStart_toStartOf="@+id/ranking2"
+      app:layout_constraintTop_toBottomOf="@+id/ranking2" />
+
+    <TextView
+      android:id="@+id/detail_actor"
+      android:layout_width="332dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="2dp"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:text="actor"
+      android:textColor="#999"
+      android:textSize="24dp"
+      app:layout_constraintStart_toEndOf="@+id/title3"
+      app:layout_constraintTop_toTopOf="@+id/title3" />
+
+    <TextView
+      android:id="@+id/detail_overview"
+      android:layout_width="375dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:ellipsize="end"
+      android:maxLines="2"
+      android:text="overview"
+      android:textColor="#999"
+      android:textSize="20dp"
+      app:layout_constraintStart_toStartOf="@+id/title3"
+      app:layout_constraintTop_toBottomOf="@+id/detail_actor" />
+
+    <ImageButton
+      android:id="@+id/imageButton"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginEnd="16dp"
+      android:background="@android:color/transparent"
+      android:clickable="true"
+      android:scaleType="fitCenter"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/detail_title"
+      app:srcCompat="@android:drawable/ic_menu_add" />
+
+    <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="관심"
+      android:textColor="#999"
+      app:layout_constraintEnd_toEndOf="@+id/imageButton"
+      app:layout_constraintStart_toStartOf="@+id/imageButton"
+      app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/Rv_movies_relate"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:layout_marginEnd="8dp"
+      android:layout_marginBottom="40dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+      android:id="@+id/textView2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="20dp"
+      android:text="출연진의 다른 영화"
+      android:textColor="#ffffff"
+      android:textSize="24dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/review_layout" />
+
+    <LinearLayout
+      android:id="@+id/review_layout"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/user_review"
+      tools:ignore="MissingConstraints" />
+
+    <TextView
+      android:id="@+id/textView4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:text="감상평"
+      android:textColor="#ffffff"
+      android:textSize="24dp"
+      app:layout_constraintStart_toStartOf="@+id/ranking3"
+      app:layout_constraintTop_toBottomOf="@+id/detail_overview" />
+
+    <LinearLayout
+      android:id="@+id/user_review"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="8dp"
+      android:layout_marginEnd="16dp"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/user_review_input"></LinearLayout>
+
+    <EditText
+      android:id="@+id/user_review_input"
+      android:layout_width="300dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="17dp"
+      android:focusableInTouchMode="true"
+      android:hint="리뷰를 남겨주세요..."
+      android:textColor="#fff"
+      android:textColorHint="#999"
+      android:textSize="20dp"
+      app:layout_constraintStart_toStartOf="@+id/textView4"
+      app:layout_constraintTop_toBottomOf="@+id/ratingBar" />
+
+    <TextView
+      android:textColor="#fff"
+      android:textSize="20dp"
+      android:id="@+id/user_review_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="등록"
+      app:layout_constraintBottom_toBottomOf="@+id/user_review_input"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@+id/user_review_input"
+      app:layout_constraintTop_toTopOf="@+id/user_review_input" />
+
+    <RatingBar
+      android:id="@+id/ratingBar"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:numStars="5"
+      android:progressTint="#FFEB3B"
+      android:rating="5"
+      android:scaleX="0.75"
+      android:scaleY="0.75"
+      android:stepSize="0.5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
